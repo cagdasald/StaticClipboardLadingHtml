@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Roboto+Mono:wght@400;700&display=swap');
+
+:root {
+    --primary-color: hsl(171, 66%, 44%);
+    --secondary-color: hsl(233, 100%, 69%);
+    --dark-color: hsl(210, 10%, 33%);
+    --light-color:  hsl(201, 11%, 66%);
+    --success-color: #5cb85c;
+    --error-color: #d9534f;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Bai Jamjuree', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+h1 {
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 20px 0;
+} 
+
+h2 {
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+img {
+    width: 100%;
+}
+
+/*Header*/
+.history {
+    height: 520px;
+    background-image: url("images/bg-header-desktop.png");
+}
+
+.history .flex{
+    flex-direction: column;
+} 
+
+.history img {
+    width: 110px;
+}
+
+.history p{
+    color: var(--light-color);
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+.history input {
+    margin-top: 20px;
+}
+
+/* Track Section */
+.track {
+    height: 1000px;
+}
+.track .grid {
+    grid-template-columns: 1.1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
+}
+
+.track .grid .track-text {
+    grid-column: 1/ span 2;
+}
+
+.track .grid .track-img {
+    position: relative;
+    left: -25px;
+    max-width: 700px;
+    grid-row: 2 /span 2 ;
+    overflow: visible;
+}
+
+
+/* Access Section*/
+
+.access {
+    height: 850px;
+}
+
+.access .flex {
+    flex-direction: column;
+}
+
+.access img {
+    margin-top: 75px;
+}
+
+/* Supercharge Section*/
+
+.supercharge {
+    height: 400px;
+    margin-bottom: 100px;
+}
+
+.supercharge img{
+    background: transparent;
+    width: 40px;
+}
+
+.supercharge .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+/* Icons Section */
+
+.icons .flex img {
+    width: 200px;
+    padding: 20px;
+}
+
+/* Clipboard Section*/
+
+.clipboard .flex {
+    flex-direction: column;
+}
+
+/*Footer*/
+.footer{
+    background-color: lightgray;
+    height: 150px;
+}
+
+.footer .flex {
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.footer .flex .flex-1 ul{
+    display: flex;
+}
+
+.footer .flex .flex-1 ul li a{
+    padding: 10px;
+}
+
+.footer .flex .logo {
+    width: 70px;
+}
+
+.footer .flex .social {
+    width: 30px;
+    display: flex;
+}
+
+.footer .flex .social img {
+    padding: 2px;
+}
+
+/* Media Queries */
+
+@media(max-width: 768px) {
+    .container {
+        width: auto;
+        height: auto;
+    }
+
+    .history {
+        height: 700px;
+    }
+
+    .clipboard input {
+        display: block;
+        margin: 10px;
+        position: relative;
+        left: 150px;
+    }
+
+    .history input {
+        display: block;
+    }
+    .track .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 2fr 1fr;
+    }
+    .track .grid .track-img {
+        grid-column: 1;
+        width: 400px;
+        position: relative center center;
+        left: 20%;   
+    }
+
+    .track .grid .track-list {
+        text-align: center;
+        grid-column: 1;
+    }
+
+    .supercharge .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .icons {
+        height: 1250px;
+    }
+    .icons .flex {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .clipboard .flex{
+        display: block;
+    }
+
+    .footer {
+        height: 300px;
+    }
+
+    .footer .flex {
+        flex-direction: column;
+    }
+
+    .footer .flex .flex-1 ul{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 500px) {
+    .history {
+        background-image: url('images/bg-header-mobile.png');
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------GLOBAL---------------------------------------*/
+
+/*Assets*/
+.btn {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    display: inline-block;
+    padding: 15px 30px;
+    cursor: pointer;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+.btn-1 {
+    background-color: var(--secondary-color) ;
+}
+
+.btn:hover {
+    transform: scale(0.98);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0 40px;
+}
+
+.card {
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 10px;
+}
+
+/*Layouts*/
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Text sizes */
+.lead {
+    font-size: 20px;
+}
+
+.sm {
+    font-size: 1rem;
+}
+
+.md {
+    font-size: 2rem;
+}
+
+.lg {
+    font-size: 3rem;
+}
+
+.xl {
+    font-size: 4rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/*Text Colors*/
+
+.text-primary, 
+.text-primary {
+    color: var(--primary-color) ;
+}
+
+.text-secondary, 
+.text-secondary {
+    color: var(--secondary-color) ;
+}
+
+.text-dark, 
+.text-dark {
+    color: var(--dark-color) ;
+}
+
+.text-light, 
+.text-light {
+    color: var(--light-color) ;
+}
+/*Bg Colors*/
+.bg-primary, 
+.btn-primary {
+    background-color: var(--primary-color) ;
+    color: #fff;
+}
+
+.bg-secondary, 
+.btn-secondary {
+    background-color: var(--secondary-color) ;
+    color: #fff;
+}
+
+.bg-dark, 
+.btn-dark {
+    background-color: var(--dark-color) ;
+    color: #fff;
+}
+/*Margin*/
+
+.my-1 {
+    margin: 1rem 0;
+}
+
+.my-2 {
+    margin: 1.5rem 0;
+}
+
+.my-3 {
+    margin: 2rem 0;
+}
+
+.my-4 {
+    margin: 3rem 0;
+}
+
+.my-5 {
+    margin: 4rem 0;
+}
+
+.m-1 {
+    margin: 1rem;
+}
+
+.m-2 {
+    margin: 1.5rem;
+}
+
+.m-3 {
+    margin: 2rem;
+}
+
+.m-4 {
+    margin: 3rem;
+}
+
+.m-5 {
+    margin: 4rem;
+}
+
+/*Padding*/
+
+.py-1 {
+    padding: 1rem 0;
+}
+
+.py-2 {
+    padding: 1.5rem 0;
+}
+
+.py-3 {
+    padding: 2rem 0;
+}
+
+.py-4 {
+    padding: 3rem 0;
+}
+
+.py-5 {
+    padding: 4rem 0;
+}
+
+.p-1 {
+    padding: 1rem;
+}
+
+.p-2 {
+    padding: 1.5rem;
+}
+
+.p-3 {
+    padding: 2rem;
+}
+
+.p-4 {
+    padding: 3rem;
+}
+
+.p-5 {
+    padding: 4rem;
+}
